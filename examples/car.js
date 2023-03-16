@@ -167,4 +167,11 @@ Example.car.car = function(xx, yy, width, height, wheelSize) {
 
 if (typeof module !== 'undefined') {
     module.exports = Example.car;
-}
+}    // add bodies
+    Composite.add(world, [
+        // walls
+        Bodies.rectangle(400, 0, 800, 50, { isStatic: true }),
+        Bodies.rectangle(400, 600, 800, 50, { isStatic: true }),
+        Bodies.rectangle(800, 300, 50, 600, { isStatic: true }),
+        Bodies.rectangle(0, 300, 50, 600, { isStatic: true })
+    ]);
